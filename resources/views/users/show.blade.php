@@ -21,7 +21,7 @@
             @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'tasks.store']) !!}
                       <div class="form-group">
-                          status{!! Form::textarea('status', old('status'), ['class' => 'form-control', 'rows' => '2']) !!}
+                          status{!! Form::textarea('status', old('status'), ['class' => 'form-control', 'rows' => '1']) !!}
                           task{!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
                           {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
