@@ -19,6 +19,7 @@ class UsersController extends Controller
     public function show($id)
     {   
         $user = User::find($id);
+        
         if (\Auth::user()->id === $user->user_id) {
         $tasks = $user->tasks()->orderBy('created_at', 'desc')->paginate(10);
 
